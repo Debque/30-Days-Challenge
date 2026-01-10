@@ -1,7 +1,8 @@
 //Set Current Date
 let isStarted = false;
 let isCompleted = false;
-let day = 3;
+let day = 4;
+let status = "not-started";
 
 document.getElementById("date").textContent = new Date().toDateString();
 
@@ -9,6 +10,7 @@ document.getElementById("date").textContent = new Date().toDateString();
 const skill = ["HTML", "CSS", "JavaScript", "React", "Git & GitHub"]
 const skillsList = document.getElementById("skillsList")
 const statusText = document.getElementById("status");
+const toggleBtn = document.getElementById("toggleBtn");
 const startBtn = document.getElementById("startBtn");
 const completeBtn = document.getElementById("completeBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -45,6 +47,21 @@ completeBtn.addEventListener("click", () => {
   completeBtn.style.opacity = 0.5;
   completeBtn.style.cursor = "not-allowed";
 });
+
+//Toggle Button Event Listener
+toggleBtn.addEventListener("click", () => {
+  if(statusText.textContent.includes("Completed")) {
+    statusText.textContent = "Status: In Progress";
+    statusText.classList.remove("Completed");
+  } else {
+    statusText.textContent = "Status: Completed";
+    statusText.classList.add("Completed");
+  }
+})
+
+
+
+
 
 //Progress Button Event Listener
 resetBtn.addEventListener("click", () => {
