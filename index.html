@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,95&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-
-    <title>30 Days Challenge</title>
+<title>3D Challenge</title>
   </head>
   <body>
-    <div class="container">
-    <h1>My Coding Journey - Day 5</h1>
+    <main class="container">
+      <header> 
+    <h1>My Coding Journey - Day 6</h1>
     <p id="date"></p>
+    </header>
+
+    <section class="description">
     <p>
       I am learning web development because I want to build real products and
       understand how the web works behind the scenes. Coding gives me the power
@@ -21,22 +24,31 @@
       consistency, growth, and becoming better one day at a time. And here are
       the things I am working on right now.
     </p>
-    <ul id="skillsList"></ul>
+    </section>
+
+   <section class="skills">
+    <h2>Skills I'm Working On</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Git & GitHub</li>
+    </ul>
+    </section>
     
-    <div class="actions">
-    <button id="startBtn">Start Day</button>
-    <button id="completeBtn">Mark as Completed</button>
-    <button id = "toggleBtn">Toggle Status</button> 
-    <button id="resetBtn">Reset Day</button>
-    </div>
+    <section class="controls">
+    <button class="btn btn-primary" data-action="start">Start Day</button>
+    <button class="btn btn-success" data-action="complete">Mark as Completed</button>
+    <button class="btn btn-warning" data-action="toggle">Toggle Status</button> 
+    <button class="btn btn-danger" data-action="reset">Reset Day</button>
+    </section>
     
-    <div class="status-box">
-      <p id="progress">Progress: 0%</p>
-    <p id="status">Status: Not Completed</p>
+    <section class="status">
+      <p class="progress">Progress: 0%</p>
+    <p class="status-text">Status: Not Completed</p>
+    </section>
     
-    
-    </div>
-    </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
