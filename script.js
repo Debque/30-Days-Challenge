@@ -12,6 +12,8 @@ buttons.forEach(button => {
   button.addEventListener ("click", () => {
 const action = button.dataset.action;
 
+
+
 if (action === "start") {
   updateProgress(50);
   updateStatus("In Progress")
@@ -44,4 +46,11 @@ function updateProgress(value) {
 
 function updateStatus(text) {
   statusE1.textContent = `Status: ${text}`;
+
+  if (text === "Completed") {
+    statusE1.classList.add("completed");
+  } else {
+    statusE1.classList.remove("completed");
+    
+  }
 }
